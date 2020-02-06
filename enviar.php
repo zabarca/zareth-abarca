@@ -12,6 +12,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+<?php 
+$myemail = 'zareth.abarca.ux@gmail.com';
+$name = $_POST['nombre'];
+$email = $_POST['email'];
+$message = $_POST['mensaje'];
+
+$to = $myemail;
+$email_subject = "Nuevo mensaje: $subject";
+$email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n Correo: $email \n Mensaje: \n $message";
+$headers = "From: $email";
+
+mail($to, $email_subject, $email_body, $headers);
+echo "El mensaje se ha enviado correctamente";
+?>
 
 		<!-- Header -->
 			<section id="header">
@@ -113,21 +127,7 @@
 								<div class="container">
 									<h3>Contact Me</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-                                    <?php 
-$myemail = 'zareth.abarca.ux@gmail.com';
-$name = $_POST['nombre'];
-$email = $_POST['email'];
-$message = $_POST['mensaje'];
-
-$to = $myemail;
-$email_subject = "Nuevo mensaje: $subject";
-$email_body = "Haz recibido un nuevo mensaje. \n Nombre: $name \n Correo: $email \n Mensaje: \n $message";
-$headers = "From: $email";
-
-mail($to, $email_subject, $email_body, $headers);
-echo "El mensaje se ha enviado correctamente";
-?>
-
+                                    
                                     <form method="post" action="enviar.php">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
