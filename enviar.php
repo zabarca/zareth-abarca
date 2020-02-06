@@ -128,7 +128,7 @@ mail($to, $email_subject, $email_body, $headers);
 echo "El mensaje se ha enviado correctamente";
 ?>
 
-                                    <form method="post" action="mailto:zareth.abarca.ux@gmail.com">
+                                    <form method="post" action="enviar.php">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
